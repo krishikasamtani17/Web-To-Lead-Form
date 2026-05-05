@@ -2,13 +2,128 @@
 <html>
 <head>
   <title>RideEasy Lead Form</title>
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 25px 30px;
+      border-radius: 12px;
+      width: 350px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    input:focus, select:focus {
+      border-color: #667eea;
+      outline: none;
+    }
+
+    .btn {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #5a67d8;
+    }
+  </style>
 </head>
+
 <body>
 
-  <h2>Book Your Ride</h2>
+<div class="container">
+  <h2>🚗 RideEasy Booking</h2>
 
-  <!-- Yaha Salesforce ka Web-to-Lead code paste karo -->
-  <!-- (jo tumne Generate button se liya hai) -->
+  <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dg5000007sjVZ" method="POST">
+
+    <input type="hidden" name="oid" value="00Dg5000007sjVZ">
+    <input type="hidden" name="retURL" value="https://krishikasamtani17.github.io/Web-To-Lead-Form/thankyou.html">
+
+    <label>First Name</label>
+    <input name="first_name" type="text">
+
+    <label>Last Name</label>
+    <input name="last_name" type="text">
+
+    <label>Email</label>
+    <input name="email" type="email">
+
+    <label>Phone</label>
+    <input name="phone" type="text">
+
+    <label>Lead Source</label>
+    <select name="lead_source">
+      <option value="Web">Web</option>
+    </select>
+
+    <label>Vehicle Preference</label>
+    <select name="00Ng500000F30R3">
+      <option value="Ev">EV</option>
+      <option value="Petrol">Petrol</option>
+    </select>
+
+    <label>Interested City</label>
+    <select name="00Ng500000F30hB">
+      <option>Gurugram</option>
+      <option>Delhi</option>
+      <option>Jaipur</option>
+      <option>Udaipur</option>
+      <option>Amritsar</option>
+    </select>
+
+    <label>Rental Duration</label>
+    <select name="00Ng500000F2a8Q">
+      <option>Hourly</option>
+      <option>Daily</option>
+      <option>Weekly</option>
+    </select>
+
+    <label>Estimated Budget</label>
+    <input name="00Ng500000F30m1" type="text">
+
+    <button type="submit" class="btn">Submit 🚀</button>
+
+  </form>
+</div>
 
 </body>
 </html>
